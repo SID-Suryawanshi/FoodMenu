@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --carrot-orange: #f7950cff;
+  --yale-blue: #073575ff;
+  --mardi-gras: #87077cff;
+  --forest-green: #099615ff;
+  --carrot-orange-2: #f79205ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #212121;
+  color: var(--carrot-orange);
+}
+
+header .heading {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cart {
+  /* background-color: #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 1rem;
+}
+.cartLogo {
+  /* background-color: #fff; */
+  text-align: center;
+  background: none;
+  border: 2px solid var(--carrot-orange-2);
+  max-width: 10vmax;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.cartLogo:hover {
+  background: none;
+  box-shadow: 0 0 10px orange;
+}
+.addFood, .removeFoodItemBtn{
+  color: var(--carrot-orange);
+  padding: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+#categorySelect {
+  padding: .3rem;
+  background: none;
+  border: 1px solid var(--carrot-orange-2);
+  color: #fff;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+#categorySelect:hover {
+  background-color: var(--carrot-orange);
+}
+
+#categorySelect option {
+  background-color: #212121;
+}
+
+.addCustomItem, .removeItem {
+  background-color: #212121;
+  border: 2px solid var(--carrot-orange-2);
+  padding: 0;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+.addCustomItem .wrapper {
+  /* background-color: aquamarine; */
+  box-sizing: border-box;
+  width: fit-content;
+  height: auto;
+  padding: 0.5rem;
+}
+.removeItem #wrapper {
+  padding: 1rem;
+}
+.wrapper #text, #setPrice, #removeItemText {
+  width: 100%;
+  border: 1px solid var(--carrot-orange-2);
+  color: #fff;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.5rem 0;
+  margin-bottom: 0.4rem;
+  background: none;
+}
+.wrapper #textarea {
+  background: none;
+  border: 1px solid var(--carrot-orange-2);
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+.wrapper #submit,
+#cancel, #imageUploads,.removeBtn, .removeCancelBtn{
+  padding: 0.3rem;
+  border: 1px solid var(--carrot-orange-2);
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5rem;
+  background: none;
+  cursor: pointer;
+}
+.wrapper #submit:hover,
+#cancel:hover, .removeBtn:hover, .removeCancelBtn:hover {
+  background-color: var(--carrot-orange);
+  color: black;
+}
+.navOptions {
+  /* background-color: tomato; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.navOptions .option {
+  /* background-color: tomato; */
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 2px solid var(--carrot-orange-2);
+  background: none;
+  color: var(--carrot-orange);
+  font-weight: 600;
+  transition: background-color 0.4s, color 0.3s;
+}
+
+.navOptions .option:hover {
+  background-color: var(--carrot-orange-2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.navOptions .option:active {
+  box-shadow: 0 0 10px #fc894d;
+}
+
+.container .foodItems {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+.container .foodItems .items {
+  box-sizing: border-box;
+  height: fit-content;
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #fff;
+  row-gap: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.items .description {
+  margin-left: 3rem;
+}
+
+.items .description .des-heading {
+  margin-left: 1rem;
+  font-family: "poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+.items .description p {
+  /* background-color: var(--yale-blue); */
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+
+.items .bg-img {
+  display: flex;
+  align-items: center;
+}
+.items .bg-img img {
+  object-fit: contain;
+  border-radius: 1rem;
+
+  border: 2px solid var(--carrot-orange);
+}
+
+.order {
+  /* background-color: violet; */
+  text-align: end;
+}
+
+.orderBtn {
+  padding: 0.5rem;
+  background-color: var(--carrot-orange-2);
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 0 5px;
+  cursor: pointer;
+  transition: all 90ms ease-in;
+}
+.orderBtn:hover {
+  background: none;
+  border: 2px solid var(--carrot-orange-2);
+  color: var(--carrot-orange-2);
+}
+.orderBtn:active {
+  opacity: 0.7;
+}
+
+.displayNone {
+  visibility: hidden;
+}

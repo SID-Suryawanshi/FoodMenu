@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="heading">Food Menu</h1>
+
+      <div class="cart">
+        <div class="cartLogo">
+          <a href="cart.html">
+            <img src="images/cart.svg" alt="cart" />
+          </a>
+        </div>
+        <div class="addFoodItems">
+          <button class="addFood cartLogo">Add +</button>
+          <button class="removeFoodItemBtn cartLogo">Remove</button>
+        </div>
+      </div>
+
+      <div class="filterOptions">
+        <nav class="navOptions">
+          <button class="option">All</button>
+          <button class="option">Starters</button>
+          <button class="option">Breakfast</button>
+          <button class="option">Lunch</button>
+          <button class="option">Shakes</button>
+          <button class="option">Dinner</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Adding new menu items -->
+      <dialog class="addCustomItem">
+        <div class="wrapper">
+          <input
+            type="text"
+            placeholder="Enter Food Item Name"
+            id="text"
+            required
+          />
+          <textarea name="" id="textarea" required></textarea><br /><br />
+          <input
+            type="file"
+            accept="image/*"
+            required
+            id="imageUploads"
+          /><br /><br />
+          <select id="categorySelect">
+            <option value="select">Select</option>
+            <option value="starter">Starter</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="shakes">Shakes</option>
+          </select> <br><br>
+          <input
+            type="text"
+            placeholder="Set Price"
+            id="setPrice"
+            required
+          /><br />
+          <button type="submit" id="submit">Add Food</button>
+          <button type="reset" id="cancel">Cancel</button>
+        </div>
+      </dialog>
+
+      <!-- Removing food items from menu -->
+      <dialog class="removeItem">
+        <div id="wrapper">
+          <input
+            type="text"
+            name=""
+            id="removeItemText"
+            placeholder="Enter name of food item to remove"
+            required
+          /> <br>
+          <button class="removeBtn">Remove Item</button>
+          <button class="removeCancelBtn">Cancel</button>
+        </div>
+      </dialog>
+
+      <div class="container">
+        <div class="foodItems">
+          <div class="items" aria-valuetext="breakfast">
+            <div class="bg-img">
+              <img src="images/pancakes.jpeg" alt="pancakes" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Buttermilk Pancakes">
+                BUTTERMILK PANCAKES
+                <span
+                  class="price"
+                  aria-valuetext="399"
+                  data-name="Buttermilk Pancakes"
+                  >&#8377;399</span
+                >
+              </h2>
+              <p>
+                Fluffy • Golden • Classic Start your day right with our soft,
+                airy buttermilk pancakes—lightly crisp on the outside and
+                perfectly fluffy inside. Made with real buttermilk for that
+                signature tang and richness, stacked high and served with a pat
+                of butter and a drizzle of warm maple syrup. Add fresh berries,
+                whipped cream, or chocolate chips for an extra treat! <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="starter">
+            <div class="bg-img">
+              <img src="images/chicken-tikka.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Chicken Tikka">
+                CHICKEN TIKKA
+                <span
+                  class="price"
+                  aria-valuetext="299"
+                  data-name="Chicken Tikka"
+                  >&#8377;299</span
+                >
+              </h2>
+              <p>
+                Smoky • Tender • Bold Flavors Succulent pieces of boneless
+                chicken marinated in a blend of yogurt, garlic, ginger, and
+                traditional Indian spices, then grilled to perfection in a
+                tandoor. Each bite bursts with smoky flavor and a hint of char,
+                served with mint chutney and fresh lemon wedges. 🔥 Perfect as a
+                starter or paired with naan and salad for a satisfying meal.
+                Spice Level: 🌶️ Mild to Medium (customizable)
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="lunch">
+            <div class="bg-img">
+              <img src="images/paneerTikkaMasala.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Paneer Tikka Masala">
+                PANEER TIKKA MASALA
+                <span
+                  class="price"
+                  aria-valuetext="499"
+                  data-name="Paneer Tikka Masala"
+                  >&#8377;499</span
+                >
+              </h2>
+              <p>
+                Creamy • Spiced • North Indian Classic Grilled chunks of
+                marinated paneer simmered in a luscious tomato-based gravy,
+                infused with aromatic spices, fresh cream, and a hint of smoky
+                tandoor flavor. This rich, flavorful curry pairs beautifully
+                with naan, paratha, or basmati rice. 🧀 A hearty vegetarian dish
+                that’s bold, comforting, and irresistibly delicious.
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="lunch">
+            <div class="bg-img">
+              <img src="images/chickenBiriyani.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Chicken Biriyani">
+                CHICKEN BIRIYANI
+                <span
+                  class="price"
+                  aria-valuetext="399"
+                  data-name="Chicken Biriyani"
+                  >&#8377;399</span
+                >
+              </h2>
+              <p>
+                Fragrant • Spiced • Royal Feast A timeless classic! Tender
+                pieces of chicken marinated in a blend of yogurt and spices,
+                layered with long-grain basmati rice, caramelized onions,
+                saffron, and fresh herbs. Slow-cooked to perfection for rich
+                flavor in every bite. Served with raita and a side of salan. 🍗
+                An irresistible dish that brings the royal flavors of India to
+                your plate.<br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="breakfast">
+            <div class="bg-img">
+              <img src="images/dosa.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Dosa">
+                DOSA
+                <span class="price" aria-valuetext="199" data-name="Dosa"
+                  >&#8377;199</span
+                >
+              </h2>
+              <p>
+                Crispy • Golden • South Indian Favorite A thin, golden-brown
+                crepe made from a fermented batter of rice and urad dal, cooked
+                to crispy perfection on a hot griddle. Light, delicious, and
+                naturally gluten-free, served with coconut chutney, tangy tomato
+                chutney, and a bowl of piping hot sambar. 🥥 A perfect balance
+                of crunch and comfort — ideal for breakfast, lunch, or dinner.
+                Varieties Available: Masala Dosa • Cheese Dosa • Mysore Dosa
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="starter">
+            <div class="bg-img">
+              <img src="images/manchurian.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Manchurian">
+                MANCHURIAN
+                <span class="price" aria-valuetext="249" data-name="Manchurian"
+                  >&#8377;249</span
+                >
+              </h2>
+              <p>
+                Indo-Chinese • Tangy • Street-Style Favorite Crispy-fried veggie
+                or chicken balls tossed in a bold and savory sauce made with
+                garlic, soy, chili, and spring onions. Bursting with sweet,
+                spicy, and tangy flavors, this Indo-Chinese classic is perfect
+                as a starter or a main course with fried rice or noodles. 🥢
+                Available in Dry & Gravy options. Variants: Veg Manchurian •
+                Chicken Manchurian Spice Level: 🌶️ Medium (adjustable)
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="breakfast">
+            <div class="bg-img">
+              <img src="images/pavBhaji.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="Pav Bhaji">
+                PAV BHAJI
+                <span class="price" aria-valuetext="159" data-name="Pav Bhaji"
+                  >&#8377;159</span
+                >
+              </h2>
+              <p>
+                Spicy • Buttery • Mumbai Street Classic A rich and flavorful
+                mash of vegetables simmered in a special blend of spices, served
+                hot with soft, butter-toasted pav (bread rolls), chopped onions,
+                a wedge of lemon, and a dollop of butter on top. Every bite is a
+                burst of bold street-style flavor! 🧈 A beloved comfort food
+                that’s perfect for any time of day. Add-ons: Extra Butter •
+                Cheese • Extra Pav
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+          <div class="items" aria-valuetext="shakes">
+            <div class="bg-img">
+              <img src="images/milkShake.jpeg" alt="" />
+            </div>
+            <div class="description">
+              <h2 class="des-heading" aria-valuetext="MilkShake">
+                MILKSHAKE
+                <span class="price" aria-valuetext="129" data-name="MilkShake"
+                  >&#8377;129</span
+                >
+              </h2>
+              <p>
+                Chilled • Creamy • Sweet Delight A thick and creamy blend of
+                chilled milk, rich ice cream, and your favorite flavors — served
+                frosty and topped with whipped cream. Perfect for cooling down
+                or treating yourself to something sweet and satisfying! 🥤
+                Flavors Available: Chocolate • Strawberry • Vanilla • Mango •
+                Oreo • Butterscotch Add-ons: Extra Ice Cream • Choco Chips •
+                Whipped Cream
+                <br />
+              </p>
+              <div class="order">
+                <button class="orderBtn">Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
