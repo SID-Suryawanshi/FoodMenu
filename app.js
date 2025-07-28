@@ -297,6 +297,7 @@ dialogSubmitBtn.addEventListener("click", (e) => {
       category: category,
     });
     localStorage.setItem("customItems", JSON.stringify(storedItems));
+    sessionStorage.setItem(foodName, foodPrice);
 
     // Reset fields
     foodNameInput.value = "";
