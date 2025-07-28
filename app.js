@@ -291,7 +291,7 @@ dialogSubmitBtn.addEventListener("click", (e) => {
     const storedItems = JSON.parse(localStorage.getItem("customItems")) || [];
     storedItems.push({
       name: foodName,
-      description,
+      description : description,
       image: reader.result,
       price: foodPrice,
       category: category,
